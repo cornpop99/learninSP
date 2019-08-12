@@ -1,5 +1,18 @@
+import org.springframework.boot.*;
+import org.springframework.boot.autoconfigure.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@EnableAutoConfiguration
 public class test {
+
+    @RequestMapping("/")
+    String test(){
+        return "test";
+    }
+
     public static void main(String[] args) {
-        System.out.println("test");
+        SpringApplication.run(test.class, args);
     }
 }
